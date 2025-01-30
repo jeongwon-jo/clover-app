@@ -1,0 +1,64 @@
+@use "variables.scss" as *;
+
+.splash {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: $primaryColor;
+
+  &__contents {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__comments {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+
+    p {
+      line-height: 20px;
+      color: $white;
+    }
+  }
+}
+
+.login {
+  width: 100%;
+  height: calc(100% - $headerHeight);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding-top: 160px;
+    padding-bottom: 40px;
+  }
+
+  &__form {
+    .form-login {
+      margin-top: 40px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 8px;
+    width: 100%;
+
+    .btn_signup {
+      align-self: flex-end;
+    }
+  }
+}

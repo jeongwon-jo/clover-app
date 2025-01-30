@@ -1,9 +1,16 @@
 import React from 'react';
-import './App.css';
+import Router from 'router/Router';
 
 function App() {
   return (
-    <div>
+    <div id='wrap'>
+      <div className="contents__wrap">
+        <div className="clover__info">
+        </div>
+        <div className="clover__contents">
+          <Router />
+        </div>
+      </div>
     </div>
   );
 }

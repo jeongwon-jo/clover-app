@@ -1,0 +1,188 @@
+@use "variables.scss" as *;
+
+#wrap {
+  width: 100%;
+  height: 100%;
+
+  .contents__wrap {
+    width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    position: relative;
+  }
+
+  .clover__info {
+    width: 100%;
+    max-width: 500px;
+    height: 100dvh;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+  .clover__contents {
+    width: 100%;
+    max-width: 500px;
+    min-height: 100dvh;
+    padding: 0 20px;
+    position: relative;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 500px;
+    height: $headerHeight;
+
+    &__inner {
+      padding: 0 20px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    &__title {
+      h3 {
+        font-size: 16px;
+        line-height: 24px;
+        color: #1A1A1A;
+        font-weight: 600;
+      }
+    }
+
+    .btn_back {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      background: url(../images/icon/icon_back.svg) no-repeat center center / contain;
+    }
+  }
+}
+
+// Button
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+
+  &-lg {
+    height: 52px;
+    line-height: 52px;
+  }
+
+  &-w100p {
+    width: 100%;
+  }
+
+  &_black {
+    background-color: $buttonColor;
+    color: #fff;
+  }
+}
+
+.btn-link {
+  text-decoration: underline;
+  color: #3D3D3D;
+}
+
+.btn_kakao {
+  background-color: #FAE100;
+
+  span {
+    color: #1A1A1A;
+    padding-left: 28px;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: url(../images/icon/icon_kakao.svg) no-repeat center center / contain;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.btn_google {
+  background-color: #EEEEEE;
+
+  span {
+    color: #1A1A1A;
+    padding-left: 28px;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: url(../images/icon/icon_google.svg) no-repeat center center / contain;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.clover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 16px;
+
+  .clover_img {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 600;
+    color: $primaryColor;
+
+    &.white {
+      color: $white;
+    }
+  }
+}
+
+.form_input {
+  margin-bottom: 24px;
+
+  .input_contents {
+    input {
+      width: 100%;
+      border: none;
+      height: 56px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+$backgroundColor: #ffffff;
+$white: #ffffff;
+$primaryColor: #1C7044;
+$primaryLightColor: #F6F9F8;
+$placeholderColor: #999999;
+$formBackgroundColor: #FAFAFA;
+$buttonColor: #444444;
+
+// Heeight
+$headerHeight: 56px;
+
+// Break Point
+$mobile: 360px;
+$tablet: 768px;
+$desktop: 1024px;
+
+// media Query mixin
+@mixin xsMobile  {
+  @media (max-width: ($mobile - 1)) {
+    @content
+  }
+};
+
+@mixin mobile  {
+  @media (min-width: $mobile) and (max-width: ($tablet - 1)) {
+    @content
+  }
+};
+
+@mixin tablet  {
+  @media (min-width: $tablet) and (max-width: ($desktop - 1)) {
+    @content
+  }
+};
+
+@mixin desktop  {
+  @media (min-width: $desktop) {
+    @content
+  }
+}
